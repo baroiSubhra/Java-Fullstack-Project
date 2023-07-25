@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tbl {
+  min-height: 150px;
+}
+
+a,
+td,
+tr {
+  cursor: pointer;
+}

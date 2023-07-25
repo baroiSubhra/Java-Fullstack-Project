@@ -1,0 +1,25 @@
+<div class="p-10">
+  <div class="py-5 flex justify-center items-center">Child Transactions</div>
+  <div class="tbl">
+    <app-table
+      [tableData]="tableData"
+      [headers]="headers"
+      [tableKeys]="tableKeys"
+      [loading]="loading"
+    ></app-table>
+  </div>
+  <div *ngIf="totalPages > 0" class="flex justify-center items-center pt-5">
+    <app-pagination
+      [loading]="loading"
+      [totalPages]="totalPages"
+      [pageNo]="pageNo"
+      (pageNoEmitter)="changePageNo($event)"
+    ></app-pagination>
+  </div>
+  <a
+    [routerLink]="['']"
+    class="py-5 text-blue-600 flex justify-center items-center text"
+  >
+    Go Back To Parent Transactions
+  </a>
+</div>
